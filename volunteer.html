@@ -159,6 +159,7 @@
                     </div>
                     <div class="panel-body">
                         <form action="https://formspree.io/linkfdn@gmail.com" method="POST">
+                            <input type="text" name="program" value="Science" readonly id="program" hidden>
                             <div class="row form-group">
                                 <div class="col-md-6">
                                     <input class="form-control" name="fname" type="text" placeholder="First Name" value=""/>
@@ -207,14 +208,14 @@
                                         </div>
                                         <div class="col-sm-3">
                                             <label class="custom-control custom-radio">
-                                                <input id="club1" name="cluba" type="radio" class="custom-control-input">
+                                                <input id="club1" name="club" value="cluba" type="radio" class="custom-control-input">
                                                 <span class="custom-control-indicator"></span>
                                                 <span class="custom-control-description" id="club1name">Reading</span>
                                             </label>
                                         </div>
                                         <div class="col-sm-3">
                                             <label class="custom-control custom-radio">
-                                                <input id="club2" name="clubb" type="radio" class="custom-control-input">
+                                                <input id="club2" name="club" value="clubb" type="radio" class="custom-control-input">
                                                 <span class="custom-control-indicator"></span>
                                                 <span class="custom-control-description" id="club2name">Debate</span>
                                             </label>
@@ -280,24 +281,28 @@
              $('#formtype').html('<div class="label pull-right text-uppercase label-success">Science</div>');
              $('#clubbox').hide();
              $('#formdownload').attr('href', 'pdf/science.pdf');
+             $('#program').attr('value', 'Science');
          } else if (target == "#language") {
              $('#clubbox').show();
              $('#formtype').html('<div class="label pull-right text-uppercase label-danger">Language</div>');
              $('#club1name').text('Reading');
              $('#club2name').text('Debate');
              $('#formdownload').attr('href', 'pdf/language.pdf');
+             $('#program').attr('value', 'Language');
          } else if (target == "#sport") {
              $('#clubbox').show();
              $('#formtype').html('<div class="label pull-right text-uppercase label-warning">Sports</div>');
              $('#club1name').text('Age 6-8');
              $('#club2name').text('Age 9-12');
              $('#formdownload').attr('href', 'pdf/sport.pdf');
+             $('#program').attr('value', 'Sports');
          } else if (target == "#art") {
              $('#clubbox').show();
              $('#formtype').html('<div class="label pull-right text-uppercase label-primary">Art</div>');
              $('#club1name').text('Music');
              $('#club2name').text('Art');
              $('#formdownload').attr('href', 'pdf/art.pdf');
+             $('#program').attr('value', 'Art');
          }
      });
     </script>
